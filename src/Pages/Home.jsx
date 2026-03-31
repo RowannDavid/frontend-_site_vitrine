@@ -6,6 +6,9 @@ import Services from '../sections/Services'
 import Portifilio from '../sections/Portifilio'
 import Contact from '../sections/Contact'
 import Competence from '../sections/Competence'
+import Footer from '../components/Footer'
+
+
 export default function Home() {
   return (
     <>
