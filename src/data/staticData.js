@@ -3,7 +3,7 @@ export const profileData = {
   role: "Développeur FullStack",
   bio: "Développeur basé en Côte d'Ivoire, je me spécialise dans la création de solutions informatiques modernes et performantes.",
   years_of_experience: 1,
-  profile_picture: "src/assets/logo.jpg",
+  profile_picture: "/logo.jpg",
   cv_url: "",
   github_url: "https://github.com/RowannDavid",
   linkedin_url: "https://www.linkedin.com/in/rowann-eli-david-kian-029625334/"
