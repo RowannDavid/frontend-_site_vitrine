@@ -3,7 +3,7 @@ export const profileData = {
   role: "Développeur FullStack",
   bio: "Développeur basé en Côte d'Ivoire, je me spécialise dans la création de solutions informatiques modernes et performantes.",
   years_of_experience: 1,
-  profile_picture: "", // Laissez vide pour utiliser l'image par défaut (src/assets/logo.jpg)
+  profile_picture: "src/assets/logo.jpg",
   cv_url: "",
   github_url: "https://github.com/RowannDavid",
   linkedin_url: "https://www.linkedin.com/in/rowann-eli-david-kian-029625334/"
@@ -26,7 +26,7 @@ export const servicesData = [
     icon_name: "Database",
     title: "Backend & API",
     description: "Conception d'architectures robustes, sécurisées et d'API RESTful pour vos applications.",
-    skills: [{ name: "Node.js" }, { name: "PostgreSQL" }, { name: "Spring Boot" }]
+    skills: [{ name: "Grails" }, { name: "PostgreSQL" }, { name: "Spring Boot" }]
   }
 ];
 
@@ -37,7 +37,7 @@ export const projectsData = [
     description: "Une plateforme de commerce en ligne complète.",
     long_description: "Une plateforme de commerce en ligne complète avec gestion des utilisateurs, panier, paiements sécurisés et tableau de bord administrateur.",
     image: null,
-    skills: [{ name: "React" }, { name: "Node.js" }, { name: "PostgreSQL" }],
+    skills: [{ name: "React" }, { name: "Grails" }, { name: "PostgreSQL" }],
     live_demo_url: "https://example.com",
     github_url: "https://github.com/RowannDavid",
     created_at: "2023-08-01T00:00:00Z"
@@ -59,24 +59,29 @@ export const skillCategoriesData = [
   {
     category: "Frontend",
     skills: [
-      { name: "React", level: 85, icon_emoji: "⚛️" },
-      { name: "JavaScript", level: 90, icon_emoji: "💛" },
-      { name: "Tailwind CSS", level: 80, icon_emoji: "🌊" }
+      { name: "HTML", level: 80, icon_emoji: "" },
+      { name: "CSS", level: 70, icon_emoji: "" },
+      { name: "React", level: 65, icon_emoji: "⚛️" },
+      { name: "JavaScript", level: 50, icon_emoji: "💛" },
+      { name: "Tailwind CSS", level: 40, icon_emoji: "🌊" },
+      { name: "Angular JS", level: 30, icon_emoji: "🟢" }
     ]
   },
   {
     category: "Backend",
     skills: [
-      { name: "Django", level: 80, icon_emoji: "🐍" },
-      { name: "Spring Boot", level: 75, icon_emoji: "🍃" },
-      { name: "Node.js", level: 70, icon_emoji: "🟢" }
+      { name: "Grails", level: 70, icon_emoji: "" },
+      { name: "Django", level: 60, icon_emoji: "🐍" },
+      { name: "Spring Boot", level: 55, icon_emoji: "🍃" },
+      { name: "Node.js", level: 30, icon_emoji: "🟢" },
+      { name: "Express js", level: 30, icon_emoji: "🟢" }
     ]
   },
   {
     category: "Base de données & Outils",
     skills: [
-      { name: "PostgreSQL", level: 80, icon_emoji: "🐘" },
-      { name: "Git", level: 85, icon_emoji: "📦" },
+      { name: "PostgreSQL", level: 60, icon_emoji: "🐘" },
+      { name: "Git", level: 65, icon_emoji: "📦" },
       { name: "Docker", level: 65, icon_emoji: "🐳" }
     ]
   }
@@ -92,15 +97,15 @@ export const toolsData = [
 
 export const certificationsData = [
   {
-    title: "Certification Développeur FullStack",
-    issuer: "Centre de Formation / Plateforme en ligne",
-    date: "2023",
-    description: "Formation complète couvrant le développement web frontend et backend, la conception d'API et la gestion de base de données."
+    title: "CERTIFICATE OF COMPLETION",
+    issuer: "simplilearn SkillUP / Plateforme en ligne",
+    date: "2026",
+    description: "Formation complète couvrant le développement backend avec django"
   },
   {
-    title: "Introduction to Cybersecurity",
-    issuer: "Cisco Networking Academy",
-    date: "2022",
-    description: "Compréhension des principes fondamentaux de la cybersécurité et des bonnes pratiques."
+    title: "Academie des jeunes developper 3eme edition",
+    issuer: "proactive.siwss",
+    date: "2026",
+    description: "Compréhension des principes fondamentaux de la developpement web fullstack avec grails et angular js et des bonnes pratiques."
   }
 ];
