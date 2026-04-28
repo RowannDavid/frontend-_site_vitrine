@@ -2,6 +2,7 @@ import React from 'react'
 import { Award, BookOpen, Code, Target } from 'lucide-react';
 import { getImageUrl } from '../config';
 import { profileData as profile } from '../data/staticData';
+import defaultProfilePic from '../assets/logo.jpg';
 
 const highlights = [
   {
@@ -32,7 +33,7 @@ function About() {
   const role = profile?.role || "Développeur FullStack";
   const bio = profile?.bio || "Développeur basé en Côte d'Ivoire, je me spécialise dans la création de solutions informatiques modernes et performantes.";
   const yearsExp = profile?.years_of_experience || 1;
-  const profilePic = profile?.profile_picture ? getImageUrl(profile.profile_picture) : "/src/assets/logo.jpg";
+  const profilePic = profile?.profile_picture ? getImageUrl(profile.profile_picture) : defaultProfilePic;
 
   return (
     <section id="about" className="py-20 bg-gray-50">

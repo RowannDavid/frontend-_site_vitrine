@@ -14,13 +14,13 @@ export const servicesData = [
     icon_name: "Monitor",
     title: "Développement Web",
     description: "Création de sites web responsives, rapides et modernes pour améliorer votre présence en ligne.",
-    skills: [{ name: "React" }, { name: "Django" }, { name: "Tailwind CSS" }]
+    skills: [{ name: "React" }, { name: "Grails" }, { name: "Tailwind CSS" }]
   },
   {
     icon_name: "Smartphone",
     title: "Développement Mobile",
     description: "Création d'applications mobiles performantes et intuitives pour iOS et Android.",
-    skills: [{ name: "React Native" }, { name: "Flutter" }]
+    skills: [{ name: "Flutter" }]
   },
   {
     icon_name: "Database",
