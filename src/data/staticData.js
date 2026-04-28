@@ -36,7 +36,7 @@ export const projectsData = [
     title: "E-Commerce Plateforme",
     description: "Une plateforme de commerce en ligne complète.",
     long_description: "Une plateforme de commerce en ligne complète avec gestion des utilisateurs, panier, paiements sécurisés et tableau de bord administrateur.",
-    image: null,
+    image: "/Accueil.png",
     skills: [{ name: "React" }, { name: "Grails" }, { name: "PostgreSQL" }],
     live_demo_url: "https://example.com",
     github_url: "https://github.com/RowannDavid",
