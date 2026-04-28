@@ -1,57 +1,10 @@
-export default function Competence() {
-  const skillCategories = [
-    {
-      category: 'Frontend',
-      skills: [
-        { name: 'React', level: 90 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'Tailwind CSS', level: 95 },
-        { name: 'Next.js', level: 80 }
-      ]
-    },
-    {
-      category: 'Backend',
-      skills: [
-        { name: 'Spring Boot', level: 85 },
-        { name: 'Node.js', level: 80 },
-        { name: 'Express', level: 75 },
-        { name: 'REST API', level: 90 }
-      ]
-    },
-    {
-      category: 'Base de données',
-      skills: [
-        { name: 'MySQL', level: 85 },
-        { name: 'PostgreSQL', level: 80 },
-        { name: 'MongoDB', level: 75 },
-        { name: 'Firebase', level: 70 }
-      ]
-    },
-    {
-      category: 'Outils & DevOps',
-      skills: [
-        { name: 'Git', level: 90 },
-        { name: 'Docker', level: 75 },
-        { name: 'GitHub Actions', level: 70 },
-        { name: 'Vercel', level: 85 }
-      ]
-    }
-  ];
+import { skillCategoriesData as skillCategories, toolsData, certificationsData } from '../data/staticData';
 
-  const technologies = [
-    { name: 'React', icon: '⚛️' },
-    { name: 'TypeScript', icon: '📘' },
-    { name: 'Tailwind', icon: '🎨' },
-    { name: 'Spring Boot', icon: '🍃' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'MySQL', icon: '🐬' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'Docker', icon: '🐳' },
-    { name: 'Git', icon: '📦' },
-    { name: 'Figma', icon: '🎨' },
-    { name: 'Next.js', icon: '▲' },
-    { name: 'Firebase', icon: '🔥' }
-  ];
+export default function Competence() {
+  // Extract all icons for the "Technologies" section
+  const technologies = skillCategories.flatMap(cat => 
+    cat.skills.map(s => ({ name: s.name, icon: s.icon_emoji || '🔹' }))
+  ).slice(0, 12); // Limit to 12 as in the original design
 
   return (
     <section id="competences" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -103,6 +56,39 @@ export default function Competence() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Tools and Certifications */}
+        <div className="grid md:grid-cols-2 gap-12 mt-16">
+          {/* Outils de travail */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Outils Informatiques</h3>
+            <div className="grid grid-cols-2 gap-4">
+              {toolsData.map((tool, index) => (
+                <div key={index} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                  <div className="text-2xl">{tool.icon_emoji}</div>
+                  <span className="font-medium text-gray-700">{tool.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Certifications</h3>
+            <div className="space-y-4">
+              {certificationsData.map((cert, index) => (
+                <div key={index} className="p-5 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="font-bold text-gray-900">{cert.title}</h4>
+                    <span className="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">{cert.date}</span>
+                  </div>
+                  <div className="text-sm text-gray-500 font-medium mb-2">{cert.issuer}</div>
+                  <p className="text-gray-600 text-sm leading-relaxed">{cert.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
